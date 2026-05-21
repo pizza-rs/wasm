@@ -13,8 +13,8 @@ crate-type = ["cdylib", "rlib"]
 
 [features]
 default = ["wee_alloc","load_json_objects_array","stemmers","query_string"]
-jieba=["dep:pizza-jieba"]
-stemmers=["dep:pizza-stemmers"]
+jieba=["dep:pizza-analysis-jieba"]
+stemmers=["dep:pizza-analysis-stemmers"]
 query_string=[]
 query_dsl=[]
 debug=[]
@@ -24,8 +24,8 @@ load_json_objects_array=[]
 [dependencies]
 pizza-common = { git = "https://github.com/infinilabs/pizza-common" }
 pizza-engine = { git = "https://github.com/infinilabs/pizza.git", default-features = false, features = ["query_string_parser"] }
-pizza-stemmers = { git = "https://github.com/infinilabs/pizza-stemmers", optional = true }
-pizza-jieba = { git = "https://github.com/infinilabs/pizza-jieba", optional = true }
+pizza-analysis-stemmers = { git = "https://github.com/infinilabs/analysis-stemmers", optional = true }
+pizza-analysis-jieba = { git = "https://github.com/infinilabs/analysis-jieba", optional = true }
 
 hashbrown = { version = "0.14",default-features = false, features = ["nightly","serde"]  }
 

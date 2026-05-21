@@ -46,14 +46,14 @@ use pizza_engine::analysis::AnalyzerConfig;
 
 use pizza_engine::search::query::Operator;
 #[cfg(feature = "stemmers")]
-use pizza_stemmers::algorithms;
+use pizza_analysis_stemmers::algorithms;
 #[cfg(feature = "stemmers")]
-use pizza_stemmers::StemmerTokenizer;
+use pizza_analysis_stemmers::StemmerTokenizer;
 use serde_json::Value;
 use wasm_bindgen::JsValue;
 
 #[cfg(feature = "jieba")]
-use pizza_jieba::JiebaTokenizer;
+use pizza_analysis_jieba::JiebaTokenizer;
 
 cfg_if! {
     // When the `wee_alloc` feature is enabled, use `wee_alloc` as the global
